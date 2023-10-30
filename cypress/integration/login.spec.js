@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 ///npx cypress open => abre o cypress
-
 context('Funcionalidade Login',() => {
     beforeEach(() =>{
         cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
