@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+///npx cypress open => abre o cypress
 
 context('Funcionalidade Login',() => {
     beforeEach(() =>{
