@@ -14,7 +14,7 @@ describe('Funcionalidade pagina de Produto', () => {
             .contains('Bruno Compete Hoodie')
             .click()
     });
-    it.only('Deve adicionar um produto ao carrinho',() =>{
+    it('Deve adicionar um produto ao carrinho',() =>{
         var quantidade = 7
         cy.get('[class="product-block grid"]')
         .contains('Bruno Compete Hoodie').click()
@@ -26,4 +26,10 @@ describe('Funcionalidade pagina de Produto', () => {
         cy.get('.single_add_to_cart_button').click()
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
     });    
-})
+    it.only('Deve adicionar produtos ao carrinho - Usando comando customizado',() =>{
+        cy.addProdutos('Bruno Compete Hoodie', 'M', 'Black', 3)
+    });
+    it.only('Deve adicionar produtos ao carrinho - Usando comando customizado',() =>{
+        cy.addProdutos('Abominable Hoodie', 'S', 'Blue', 2)
+    });
+});

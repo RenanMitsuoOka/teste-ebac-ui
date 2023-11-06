@@ -17,5 +17,10 @@ describe('Funcionalidade pré cadastro', () =>{
         cy.get('#account_last_name').type(sobrenomefaker)
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('contain', 'modificados')
-    })
+    });
+it.only('Deve completar o pré-cadastro usando os comandos customizados',() =>{
+    let emailfaket2 = faker.internet.email()
+    cy.precadastro(emailfaket2, 'senha@A123', 'Teste', 'Teste automatico')
+});
+
 });
