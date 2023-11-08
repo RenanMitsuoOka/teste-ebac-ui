@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
-
+import enderecoPage from '../support/page-objects/endereco.page';
+import EnderecoPage from '../support/page-objects/endereco.page'
 describe('Funcionalidade Endereços = Faturamento de entrega', () => {
     beforeEach(() => {
         cy.visit('minha-conta')
@@ -8,7 +9,7 @@ describe('Funcionalidade Endereços = Faturamento de entrega', () => {
         })
     });
 
-    it('Deve fazer cadastro de faturamento com sucesso', () => {
-
+    it.only('Deve fazer cadastro de faturamento com sucesso', () => {
+        enderecoPage.editarEnderecoFaturamento()
     });
 });
